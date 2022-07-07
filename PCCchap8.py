@@ -4,3 +4,13 @@ def greet_user():  # <--- function
 
 
 greet_user()  # <---call to function
+
+
+# Modified to specify a user
+def greet_user(username):
+    print("Hello, " + username.title() + "!")
+
+
+greet_user('jesse')
+
+
