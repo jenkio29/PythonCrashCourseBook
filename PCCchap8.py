@@ -19,11 +19,25 @@ def describe_pet(animal_type, pet_name):
     print("\nI have a " + animal_type + ".")
     print("My " + animal_type + "'s name is " + pet_name.title() + ".")
 
-describe_pet('hamster', 'harry') # <--- arguments in order
-describe_pet('harry', 'hamster') # <--- arguments out of order
+
+describe_pet('hamster', 'harry')  # <--- arguments in order
+describe_pet('harry', 'hamster')  # <--- arguments out of order
 
 # Keyword Arguments
 describe_pet(animal_type='hamster', pet_name='harry')
 
+
 # Default values
-# def describe_pet(animal_type='dog', pet_name) <--set variable in function
+# def describe_pet(pet_name, animal_type='dog') <--set variable in function
+
+# Return Values
+def get_formatted_name(first_name, last_name, middle_name=''):
+    if middle_name:
+        full_name = first_name + ' ' + middle_name + ' ' + last_name
+    else:
+        full_name = first_name + ' ' + last_name
+    return full_name.title()
+
+
+musician = get_formatted_name('jimi', 'hendrix') # <---last argument optional
+print(musician)
